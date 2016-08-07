@@ -1,7 +1,6 @@
 <ion-view title="View Housing">
 <ion-content padding="true">
     <h1><center>Housing Information</center></h1>
-
         <ion-list > 
             <ion-item class="item item-text-wrap">
                 {{nameId}}
@@ -18,7 +17,41 @@
             <ion-item class="item item-text-wrap">
                 {{descId}}
             </ion-item>
+            <ion-item ng-show="washingMachineId">
+                Washing Machine
+            </ion-item>
+            <ion-item ng-show="dryerId">
+                Dryer
+            </ion-item>
+            <ion-item ng-show="poolId">
+                Pool
+            </ion-item>        
+            <ion-item ng-show="gymId">
+                Gym
+            </ion-item>
+            <ion-item ng-show="gasId">
+                Gas
+            </ion-item>
+            <ion-item ng-show="waterId">
+                Water
+            </ion-item>
+            <ion-item ng-show="electricId">
+                Electric    
+            </ion-item>        
+            <ion-item ng-show="cableId">
+                Cable
+            </ion-item>          
+            <ion-item ng-show="wifiId">
+                Wifi
+            </ion-item>
+            <ion-item ng-show="dishwasherId">
+                Dishwasher
+            </ion-item>
+            <ion-item ng-show="balconyId">
+                Balcony
+            </ion-item>
         </ion-list>
+        <br>
     <a>
         <div class="button-bar">
                 <button class= "button button-assertive icon-left ion-chatbox padding" ng-click = "facebookMessage()">

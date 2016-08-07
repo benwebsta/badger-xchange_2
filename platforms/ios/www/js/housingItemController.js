@@ -15,7 +15,11 @@ app.controller('housingItemController',
     .then(function() {
       item = $scope.messages.$getRecord(id);
       $state.go('tabs.viewHousing', {'name': item.title, 'startDate': item.startDate, 
-                              'endDate': item.endDate, 'price': item.price, 'desc': item.desc, 'ID':item.ID});
+                              'endDate': item.endDate, 'price': item.price, 'desc': item.desc, 
+                              'ID':item.ID, 'washingMachine': item.washingMachine, 'dryer': item.dryer,
+                              'pool':item.pool, 'gym':item.gym, 'gas':item.gas, 'water':item.water,
+                              'electric':item.electric, 'cable':item.cable, 'wifi':item.wifi, 
+                              'dishwahser':item.dishwasher, 'balcony':item.balcony});
     })
     .catch(function(err) {
       console.error(err);

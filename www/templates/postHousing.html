@@ -6,12 +6,12 @@
                 <input type="text" placeholder="Title of Post" ng-model="name">
             </label>
             <label class="item item-input">
-                   <span class="input-label" style="color: #aaa;">Start Date</span> 
-                   <input type="date" ng-model="startDate">
+                <span class="input-label" ng-model="startDate" style="color: #aaa;">Start Date</span>
+                <input type="date" ng-model="startDate">
             </label>
             <label class="item item-input">
-                   <span class="input-label" style="color: #aaa;">End Date</span> 
-                   <input type="date" ng-model="endDate">
+                <span class="input-label" ng-model="endDate" style="color: #aaa;">End Date </span>
+                <input type="date" ng-model="endDate">
             </label>
             <label class="item item-input">
                 <input type="number" placeholder="Price format: '500'" ng-model="price">
@@ -20,17 +20,32 @@
                 <input type="text" placeholder="Description" ng-model="desc">
             </label>
         </div>
-            <div class="button-bar">
-                    <button class="button button-outline button-dark icon-left ion-checkmark padding" ng-click="postHousingClick(name, startDate, endDate, price, desc)">
-                        Post
-                    </button>
-            </div>
-            <div ng-show="formError">
-                <h5 style="color:red;">
-                    Please make sure all fields are filled out.
-                    <br> 
-                    **Pictures optional**
-                </h5>
-            </div>
+        <ion-list>
+          <ion-checkbox ng-model="washingMachine">Washing Machine</ion-checkbox>
+          <ion-checkbox ng-model="dryer">Dryer</ion-checkbox>
+          <ion-checkbox ng-model="pool">Pool</ion-checkbox>
+          <ion-checkbox ng-model="gym">Gym</ion-checkbox>
+          <ion-checkbox ng-model="gas">Gas</ion-checkbox>
+          <ion-checkbox ng-model="water">Water</ion-checkbox>
+          <ion-checkbox ng-model="electric">Electric</ion-checkbox>
+          <ion-checkbox ng-model="cable">Cable</ion-checkbox>
+          <ion-checkbox ng-model="wifi">Wifi</ion-checkbox>
+          <ion-checkbox ng-model="dishwasher">Dishwasher</ion-checkbox>
+          <ion-checkbox ng-model="balcony">Balcony</ion-checkbox>
+        </ion-list>
+        <br>
+        <div class="button-bar">
+                <button class="button button-outline button-dark icon-left ion-checkmark padding" ng-click="postHousingClick(name, startDate, endDate, price, desc, washingMachine, dryer, pool, gym, gas, water, electric, cable, wifi, dishwasher, balcony)">    
+                    Post
+                </button>
+        </div>
+        <br>
+        <div ng-show="formError">
+            <h5 style="color:red;">
+                Please make sure all fields are filled out.
+                <br> 
+                **Pictures optional**
+            </h5>
+        </div>
     </ion-content>
   </ion-view>

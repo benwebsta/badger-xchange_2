@@ -102,7 +102,18 @@ $stateProvider
         'endDate': 'default end date',
         'price': 'default price',
         'desc': 'default description',
-		    'ID': 'default id'
+		    'ID': 'default id',
+        'washingMachine': false,
+        'dryer': false,
+        'pool': false,
+        'gym': false,
+        'gas': false,
+        'water': false,
+        'electric': false,
+        'cable': false,
+        'wifi': false,
+        'dishwasher': false,
+        'balcony': false
       }, 
   views: {
     housing2: {
@@ -241,6 +252,8 @@ app.factory("postHouse", function() {
   items.endDate = '';
   items.price = '';
   items.desc = '';
+  items.washingMachine = '';
+  items.dryer = '';
   return items;
 })
 app.factory("postBook", function() {
